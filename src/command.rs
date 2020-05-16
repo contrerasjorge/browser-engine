@@ -1,6 +1,6 @@
 use crate::css::{Color, Value};
 use crate::layout::{LayoutBox, Rectangle};
-use std::fmt;
+use crate::std::fmt;
 
 pub type DisplayList = Vec<DisplayCommand>;
 
