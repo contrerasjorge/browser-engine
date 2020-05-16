@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 use std::{fmt, str};
 
-use css::{Selector, Stylesheet, Value};
-use dom::{ElementData, Node, NodeType};
+use crate::css::{Selector, Stylesheet, Value};
+use crate::dom::{ElementData, Node, NodeType};
 
 type PropertyMap<'a> = HashMap<&'a str, &'a Value>;
 
@@ -30,7 +30,7 @@ impl<'a> StyledNode<'a> {
             }
         }
 
-        StyedNode {
+        StyledNode {
             node,
             styles: match node.node_type {
                 NodeType::Element(ref e) => StyledNode::get_styles(e, stylesheet),
